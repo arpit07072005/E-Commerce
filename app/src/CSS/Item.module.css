@@ -1,0 +1,21 @@
+.container{
+    padding-top: 4%;
+	background-color: rgb(241, 255, 255);
+    height: 100vh;
+}
+.image img{
+    width: 40%;
+    position: fixed;
+    margin-top: -4%;
+}
+.description{
+    margin-left: 40%;
+}
+.name{
+font-size: 1.2rem;
+	font-weight: bold;
+	margin: 15px 0 10px 0;
+}
+p,span{
+    margin: 20px 0px;
+}
