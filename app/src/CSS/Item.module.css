@@ -6,10 +6,24 @@
 .image img{
     width: 40%;
     position: fixed;
-    margin-top: -4%;
+    top: 10vh;
+}
+.buttons{
+    position: fixed;
+    top: 90%;
+display: flex;
+flex-direction: row;
+gap: 20%;
+margin-left: 10%;
+}
+.buttons button{
+      height: 45px;
+    width: 100px;
+    border-radius: 8%;
 }
 .description{
     margin-left: 40%;
+        margin-right: 6%;
 }
 .name{
 font-size: 1.2rem;
@@ -18,4 +32,10 @@ font-size: 1.2rem;
 }
 p,span{
     margin: 20px 0px;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:5px;
 }

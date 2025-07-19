@@ -15,7 +15,7 @@ function Navbar() {
 </div>
 <div className={styles.right}>
     <div className="login">Login</div>
-    <div className="cart">Cart</div>
+    <div className="cart"><Link to='/cart'>Cart</Link></div>
 </div>
     </div>
   )

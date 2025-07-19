@@ -28,7 +28,7 @@ font-size: 1rem;
 .price , .rating{
 font-size: 1.2rem;
 	font-weight: bold;
-	color: rgb(51, 51, 51);
+	color: #333333;
 }
 .container{
     display: flex;

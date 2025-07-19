@@ -32,7 +32,7 @@ console.log(e)
       })
       .map((item)=>(
         <div key={item.id} className={styles.cart}>
-<Link to={`/item/${item.id}`}>
+<Link to={`/item/${item.id}`} style={{textDecoration: 'none',color: "#333333"}}>
         <div className={styles.image}> 
           <img src={item.images ? item.images[0] : ''}
             alt={item.title}  />
