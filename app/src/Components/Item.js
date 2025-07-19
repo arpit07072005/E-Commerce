@@ -4,9 +4,11 @@ import { useParams } from 'react-router-dom'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import styles from '../CSS/Item.module.css'
 import { Context } from './CartContext';
+import { PaymentContext } from './PaymentContext';
 function Item() {
 
     const { addToCart } = useContext(Context)
+    const Razorpayfn = useContext(PaymentContext)
     const { id } = useParams();
     const [item, setItem] = useState({})
     const request = async () => {
@@ -26,7 +28,7 @@ function Item() {
             <div className={styles.image}>
                 <div className={styles.buttons}>
                     <button onClick={()=>addToCart(item)}>Add to Cart</button>
-                    <button>Buy</button>
+                    <button onClick={()=>Razorpayfn(item.price)}>Buy</button>
                 </div>
                 {item.images?.[0] && <img src={item.images[0]} alt={item.title} />}
             </div>

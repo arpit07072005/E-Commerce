@@ -2,8 +2,10 @@
 import React, { useContext } from 'react'
 import { Context } from './CartContext'
 import styles from '../CSS/Cart.module.css'
+import { PaymentContext } from './PaymentContext';
 export default function Cart() {
   const { items, removeFromCart } = useContext(Context);
+  const Razorpayfn = useContext(PaymentContext);
   return (
     <div className={styles.container}>
       <h2>Your Shopping Bag</h2>
@@ -16,7 +18,7 @@ export default function Cart() {
             <p>Quantity: {item.quantity || 1}</p>
             <div className={styles.buttons}>
               <button onClick={() => removeFromCart(item.id)}>remove</button>
-              <button onClick={() => removeFromCart(item.id)}>Buy</button>
+              <button onClick={()=>Razorpayfn(item.price)}>Buy</button>
             </div>
 
           </div>
