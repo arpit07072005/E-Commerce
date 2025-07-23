@@ -7,7 +7,7 @@ export const PaymentContext = createContext();
 export const PaymentProvider = ({ children }) => {
 
     const Razorpayfn = async (price) => {
-        const { data } = await axios.post('http://localhost:5000/order', { amount: price });
+        const { data } = await axios.post('https://e-commerce-backend-m4zm.onrender.com/order', { amount: price });
 console.log("jai ho");
         const options = {
             key: "rzp_test_CGjThgj9XQHnOk",
@@ -17,7 +17,7 @@ console.log("jai ho");
             description: "Test Transaction",
             order_id: data.id,
             handler: async function (response) {
-                const verifyRes = await axios.post('http://localhost:5000/verify', {
+                const verifyRes = await axios.post('https://e-commerce-backend-m4zm.onrender.com/verify', {
                     razorpay_order_id: response.razorpay_order_id,
                     razorpay_payment_id: response.razorpay_payment_id,
                     razorpay_signature: response.razorpay_signature,
